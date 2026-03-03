@@ -1,0 +1,35 @@
+#Encabezado{    
+    position: absolute; /*indicmos de forma precisa la posición
+    del elemento en la página*/
+    top: 0;; /*top distancia entre el borde superior del elemento
+    posicionado y el borde superior del elemento contenedor*/
+    left: 0; /*distancia entre los lados izquierdos*/
+    height:10%; /*altura del contenedor elemento*/
+    width: 100%; /*ancho respecto al bloque que lo contiene*/
+    background-color:rgb(4, 91, 204);
+    border: 1px solid black ;
+}
+#cuerpo1{
+    position: absolute;
+    top: 10.2%;
+    left: 0;
+    height: 5%;
+    width: 100%;
+    background-color:rgb(223, 37, 37) ;
+}
+#cuerpo2{
+    position: absolute;
+    top: 15.2%;
+    left:0;
+    height: 70%;
+    width: 100%;
+    background-color: rgb(105, 32, 173);
+}
+#pie{
+    position: absolute;
+    top:85.2% ;
+    left: 0;
+    height: 15%;
+    width: 100%;
+    background-color: rgb(235, 137, 25);
+}
