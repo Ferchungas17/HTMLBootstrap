@@ -1,15 +1,15 @@
-article{
-background-color: #ffbb00;
+header {
+    background-color: #312313;
+}
+nav{
+    background-color: blue;
 }
 main{
-background-color: #fb6542;
+    background-color: aqua;
+}
+section{
+    background-color: blanchedalmond;
 }
 footer{
-background-color: #375e97;
-}
-header{
-background-color: #375e97;
-}
-body{
-background-color: #3f681c;
+    background-color: brown;
 }
