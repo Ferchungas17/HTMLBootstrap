@@ -1,0 +1,49 @@
+@media (max-width: 767px) {
+
+  /* Centrar login */
+  .col-md-6 {
+    width: 100%;
+    text-align: center;
+    background-color: bisque;
+  }
+
+  /* Inputs y botones ocupen todo el ancho */
+  form {
+    width: 100%;
+    
+  }
+
+  /* Ajustar títulos */
+  h1 {
+    font-size: 32px !important;
+  }
+
+  /* Quitar borde del lado izquierdo */
+  .border-end {
+    border: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+  h1 {
+    font-size: 45px !important;
+    background-color: blueviolet;
+  }
+
+  .col-md-6 {
+    padding: 20px;
+  }
+
+}
+@media (min-width: 992px) {
+
+  .container {
+    max-width: 1100px;
+    color:brown
+  }
+
+  .col-md-6 {
+    padding: 40px;
+  }
+
+}
