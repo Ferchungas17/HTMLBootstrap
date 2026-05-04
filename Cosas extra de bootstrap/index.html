@@ -1,0 +1,123 @@
+```html id="accordion-bootstrap-demo"
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Accordion con Bootstrap</title>
+
+  <!-- CDN de Bootstrap (estilos) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body class="p-4">
+
+  <h2>Ejemplo de Accordion (Bootstrap)</h2>
+
+  <!-- ACCORDION -->
+  <div class="accordion" id="miAccordion">
+
+    <!-- ITEM 1 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#item1">
+          ¿Cómo pago?
+        </button>
+      </h2>
+      <div id="item1" class="accordion-collapse collapse show" data-bs-parent="#miAccordion">
+        <div class="accordion-body">
+          Puedes pagar con tarjeta, efectivo o transferencia.
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item2">
+          ¿Hacen envíos?
+        </button>
+      </h2>
+      <div id="item2" class="accordion-collapse collapse" data-bs-parent="#miAccordion">
+        <div class="accordion-body">
+          Sí, hacemos envíos a todo el país.
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item3">
+          ¿Puedo devolver un producto?
+        </button>
+      </h2>
+      <div id="item3" class="accordion-collapse collapse" data-bs-parent="#miAccordion">
+        <div class="accordion-body">
+          Sí, tienes 30 días para devolverlo.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<!--TODO ESTO ES DE ACCORDION-->
+<!-- Bootstrap CSS --> 
+ <h1>Componentes de Bootstrap</h1> 
+ 
+    <!-- ===================== --> 
+    <!-- 🔹 ALERTS --> 
+    <!-- ===================== --> 
+    <h3>Alerts</h3> 
+    <!-- Alerta básica de éxito --> 
+     <div class="alert alert-success" role="alert"> 
+        Registro exitoso </div> 
+        
+        <!-- Alerta de error --> 
+         <div class="alert alert-danger d-flex align-items-center" role="alert">
+            Error al iniciar sesión<i class="bi bi-check-circle-fill ms-3"></i> </div>
+    
+        <!-- Alerta con botón de cerrar --> 
+         <div class="alert alert-warning alert-dismissible fade show" role="alert"> 
+            Tu sesión está por expirar <!-- Botón de cerrar --> 
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button> 
+        </div> 
+        <!-- ===================== --> 
+        <!-- 🔹 BADGE --> 
+        <!-- ===================== --> 
+         <h3>Badge</h3> 
+         <!-- Badge en un botón --> 
+          <button class="btn btn-primary"> 
+            Notificaciones <span class="badge bg-danger">3</span> 
+        </button> 
+        <br><br> 
+        <!-- Badge tipo etiqueta --> 
+         <span class="badge bg-success">Nuevo</span> 
+         <span class="badge bg-warning text-dark">Oferta</span> 
+         <!-- ===================== --> 
+         <!-- 🔹 BREADCRUMB --> 
+         <!-- ===================== --> 
+          <h3>Breadcrumb</h3> 
+          <!-- Navegación de ruta --> 
+           <nav aria-label="breadcrumb"> <ol class="breadcrumb"> 
+            <li class="breadcrumb-item">
+                <a href="#">Inicio</a></li> 
+                <li class="breadcrumb-item"><a href="#">Productos</a></li> 
+                <li class="breadcrumb-item active" aria-current="page">Zapatos</li> 
+            </ol> </nav> 
+            <!-- ===================== -->
+            <!-- 🔹 CLOSE BUTTON -->
+            <!-- ===================== --> 
+             <h3>Close Button</h3> 
+            <!-- Botón de cerrar independiente --> 
+             <button type="button" class="btn-close" aria-label="Cerrar"></button> 
+             <br><br> <!-- Ejemplo práctico: cerrar una caja --> 
+             <div class="alert alert-info alert-dismissible fade show"> Este es un mensaje que puedes cerrar 
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button> 
+            </div>
+-->
+
+<h2>Solicitud de Pago</h2> <!-- Aquí aparecerán las alertas --> <div id="alerta"></div> <!-- FORMULARIO DE PAGO --> <form id="formPago"> <!-- Nombre del usuario --> <div class="mb-3"> <label class="form-label">Nombre del titular</label> <input type="text" class="form-control" id="nombre" required> </div> <!-- Monto --> <div class="mb-3"> <label class="form-label">Monto a pagar</label> <input type="text" class="form-control" id="monto" required> </div> <!-- Botón --> <button type="submit" class="btn btn-primary">Enviar pago</button> </form> <script> const form = document.getElementById("formPago"); const alerta = document.getElementById("alerta"); // Expresión regular: detecta caracteres especiales const regexEspeciales = /[^a-zA-Z0-9\s]/; form.addEventListener("submit", function(e) { e.preventDefault(); // evita envío real const nombre = document.getElementById("nombre").value; const monto = document.getElementById("monto").value; // VALIDACIÓN if (regexEspeciales.test(nombre) || regexEspeciales.test(monto)) { // ❌ ALERTA DE ERROR alerta.innerHTML = ` <div class="alert alert-danger alert-dismissible fade show"> Error: No se permiten caracteres especiales en los campos <button type="button" class="btn-close" data-bs-dismiss="alert"></button> </div> `; } else { // ✅ ALERTA DE ÉXITO alerta.innerHTML = ` <div class="alert alert-success alert-dismissible fade show"> Solicitud de pago enviada correctamente <button type="button" class="btn-close" data-bs-dismiss="alert"></button> </div> `; } }); </script>
+            
+</body>
+</html>
+```
