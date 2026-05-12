@@ -1,0 +1,34 @@
+
+/* HOVER */
+.custom-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* MENU GRANDE */
+.mega-menu {
+    width: 250px;
+    padding: 20px 0;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 4px 10px rgba(0,0,0,.08);
+}
+
+/* ITEMS */
+.mega-menu .dropdown-item {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* HOVER ITEMS */
+.mega-menu .dropdown-item:hover {
+    background-color: #f8f5fc;
+    color: #654090;
+}
+
+/* ICONO DERECHA */
+.mega-menu i {
+    color: #cfcfcf;
+    font-size: 18px;
+}
+
